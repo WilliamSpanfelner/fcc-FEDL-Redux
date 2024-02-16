@@ -4,7 +4,7 @@ const defaultState = {
 
 const reducer = (state = defaultState, action) => {
     // Change code below this line
-
+    return action.type == 'LOGIN' ? {login: true} : state;
     // Change code above this line
 };
 
