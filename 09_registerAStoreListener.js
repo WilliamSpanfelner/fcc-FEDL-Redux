@@ -15,7 +15,9 @@ const store = Redux.createStore(reducer);
 let count = 0;
 
 // Change code below this line
-
+function incrementOnAction() {
+    count += 1;
+};
 // Change code above this line
 
 store.dispatch({type: ADD});
