@@ -18,6 +18,8 @@ let count = 0;
 function incrementOnAction() {
     count += 1;
 };
+
+store.subscribe(incrementOnAction);
 // Change code above this line
 
 store.dispatch({type: ADD});
