@@ -14,7 +14,10 @@ const notesReducer = (state = 'Initial State', action) => {
 
 const addNoteText = (note) => {
 // Change code below this line
-
+    return {
+        type: ADD_NOTE,
+        text: note
+    }
 // Change code above this line
 };
 
