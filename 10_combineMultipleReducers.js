@@ -30,6 +30,9 @@ const authReducer = (state = {authenticated: false}, action) => {
     }
 };
 
-const rootReducer = // Defin the root reucer here
+const rootReducer = Redux.combineReducers({
+    count: counterReducer,
+    auth: authReducer
+});
 
 const store = Redux.createStore(rootReducer);
