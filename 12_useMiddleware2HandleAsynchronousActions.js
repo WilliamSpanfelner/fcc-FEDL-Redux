@@ -8,12 +8,14 @@ const handleAsync = () => {
   return function(dispatch) {
     // Dispatch request action here
 
-    dispatch(requestingData());
-    
+    dispatch(requestingData()); //dispatch is treated like a function
+
     setTimeout(function() {
       let data = {
         users: ['Jeff', 'William', 'Alice']
       }
+
+    dispatch(receivedData(data));  
     // Dispatch received data action here
 
     }, 2500);
