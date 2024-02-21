@@ -12,7 +12,7 @@ const immutableReducer = (state = todos, action) => {
     switch (action.type) {
         case ADD_TO_DO:
             // Don't mutate state here or the tests will fail
-            return todos.concat(action.todo); // the concat method returns a new array
+            return state.concat(action.todo); // the concat method returns a new array
         default:
             return state;
     }
