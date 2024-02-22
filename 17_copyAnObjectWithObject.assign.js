@@ -8,8 +8,8 @@ const defaultState = {
 const immutableReducer = (state = defaultState, action) => {
     switch (action.type) {
         case 'ONLINE':
-            const newObject = Object.assign({}, state);
-            newObject.status = 'online';
+            const newObject = Object.assign({}, state, {status: 'online'});
+            // newObject.status = 'online';
             return newObject;
     
         default:
