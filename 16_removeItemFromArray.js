@@ -2,7 +2,7 @@ const immutableReducer = (state = [0,1,2,3,4,5], action) => {
     switch (action.type) {
         case 'REMOVE_ITEM':
             // Don't mutate state here or the tests will fail
-            return;
+            return state.filter(item => item != state[action.index]);
     
         default:
             return state;
